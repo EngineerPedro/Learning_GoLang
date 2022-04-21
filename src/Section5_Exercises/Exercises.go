@@ -8,11 +8,15 @@ var x int = 42
 var y string = " James Bond "
 var z bool = true
 
+//Excercise 4 having me create my own type
+type Leslie int
+
 func main() {
 
 	//Exercise_01()
 	//Exercise_02()
-	Exercise_03()
+	//Exercise_03()
+	Exercise_04()
 }
 
 func Exercise_01() {
@@ -75,4 +79,27 @@ func Exercise_03() {
 
 	s := fmt.Sprintf(" %v\t %v\t %v ", x, y, z)
 	fmt.Println(s)
-}s
+}
+
+func Exercise_04() {
+	/*	Hands-on exercise #4
+			● FYI - nice documentation and new terminology “underlying type”
+			○ https://golang.org/ref/spec#Types
+			For this exercise
+			1. Create your own type. Have the underlying type be an int.
+			2. create a VARIABLE of your new TYPE with the IDENTIFIER “x” using the “VAR”
+			keyword
+			3. in func main
+			a. print out the value of the variable “x”
+			b. print out the type of the variable “x”
+			c. assign 42 to the VARIABLE “x” using the “=” OPERATOR
+			d. print out the value of the variable “x”
+		code: here’s the solution: https://play.golang.org/p/snm4WuuYmG
+		video: 020*/
+
+	var x Leslie
+	fmt.Println(x)
+	fmt.Printf("%t\n", x)
+	x = 42
+	fmt.Println(x)
+}
