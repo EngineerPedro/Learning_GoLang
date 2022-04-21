@@ -10,7 +10,8 @@ const (
 func main() {
 	//Exercise_01()
 	//Exercise_02()
-	Exercise_03()
+	//Exercise_03()
+	Exercise_04()
 }
 
 func Exercise_01() {
@@ -57,4 +58,23 @@ func Exercise_03() {
 	video: 033*/
 
 	fmt.Println(a, b)
+}
+
+func Exercise_04() {
+	/*	Hands-on exercise #4
+			Write a program that
+			● assigns an int to a variable
+			● prints that int in decimal, binary, and hex
+			● shifts the bits of that int over 1 position to the left, and assigns that to a variable
+			● prints that variable in decimal, binary, and hex
+		solution: https://play.golang.org/p/Ms964T8SbH
+		video: 034*/
+	var x int = 45
+	fmt.Printf("%d\t %b\t %#x \n", x, x, x)
+	y := x << 1
+	fmt.Printf("%d\t %b\t %#x", y, y, y)
+}
+
+func Exercise_05() {
+
 }
