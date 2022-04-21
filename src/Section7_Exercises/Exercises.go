@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	Exercise_01()
+	//Exercise_01()
+	Exercise_02()
 }
 
 func Exercise_01() {
@@ -28,4 +29,17 @@ func Exercise_01() {
 	fmt.Println(x != y)
 	fmt.Println(x < y)
 	fmt.Println(x > y)
+}
+
+func Exercise_02() {
+
+	/*	Hands-on exercise #1
+			Write a program that prints a number in decimal, binary, and hex
+		solution: https://play.golang.org/p/bAQxcEuK8O
+		video: 031*/
+
+	a := 40
+	fmt.Println(a)
+	fmt.Printf("%d\t %b\t %#x", a, a, a)
+
 }
