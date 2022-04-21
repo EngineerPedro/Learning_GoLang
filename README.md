@@ -1,0 +1,2 @@
+# Learning_GoLang
+ I have been in a class on udemy teaching me how to program in the GoLang language. I want to make this repo in an effort to refresh my skills. Truth is I already know the Go language but my possible employers do not. So I thought it would be wise to redo this course and post me doing all the excercises for the purpose of demonstrating how consistently I get back to learning / reviewing the basics, and increase my skills in writing in GO. I hope any coming across knows that consistency is the key.
