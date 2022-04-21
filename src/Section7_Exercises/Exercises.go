@@ -2,9 +2,15 @@ package main
 
 import "fmt"
 
+const (
+	a     = 42
+	b int = 43
+)
+
 func main() {
 	//Exercise_01()
-	Exercise_02()
+	//Exercise_02()
+	Exercise_03()
 }
 
 func Exercise_01() {
@@ -42,4 +48,13 @@ func Exercise_02() {
 	fmt.Println(a)
 	fmt.Printf("%d\t %b\t %#x", a, a, a)
 
+}
+
+func Exercise_03() {
+	/*	Hands-on exercise #3
+		Create TYPED and UNTYPED constants. Print the values of the constants.
+			solution: https://play.golang.org/p/NutvJXWUx2
+	video: 033*/
+
+	fmt.Println(a, b)
 }
