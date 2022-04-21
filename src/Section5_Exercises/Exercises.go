@@ -11,12 +11,15 @@ var z bool = true
 //Excercise 4 having me create my own type
 type Leslie int
 
+var k Leslie
+
 func main() {
 
 	//Exercise_01()
 	//Exercise_02()
 	//Exercise_03()
-	Exercise_04()
+	//Exercise_04()
+	Exercise_05()
 }
 
 func Exercise_01() {
@@ -102,4 +105,36 @@ func Exercise_04() {
 	fmt.Printf("%t\n", x)
 	x = 42
 	fmt.Println(x)
+}
+
+func Exercise_05() {
+	/*	Hands-on exercise #5
+			Building on the code from the previous example
+			1. at the package level scope, using the “var” keyword, create a VARIABLE with the
+			IDENTIFIER “y”. The variable should be of the UNDERLYING TYPE of your custom
+			TYPE “x”
+			a. eg:
+			2. in func main
+			a. this should already be done
+			i. print out the value of the variable “x”
+			ii. print out the type of the variable “x”
+			iii. assign your own VALUE to the VARIABLE “x” using the “=” OPERATOR
+			Todd McLeod - Learn To Code Go on Udemy - Part 1 - Page 27
+			iv. print out the value of the variable “x”
+			b. now do this
+			i. now use CONVERSION to convert the TYPE of the VALUE stored in “x”
+			to the UNDERLYING TYPE
+			1. then use the “=” operator to ASSIGN that value to “y”
+			2. print out the value stored in “y”
+			3. print out the type of “y”
+		code: here’s the solution: https://play.golang.org/p/cj8RrYgBOD
+		video: 021*/
+	fmt.Println(k)
+	fmt.Printf("%T\n", k)
+	k = 99
+	fmt.Println(k)
+	var y int
+	y = int(k)
+	fmt.Println(y)
+	fmt.Printf("%T", y)
 }
