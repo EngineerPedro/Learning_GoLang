@@ -3,8 +3,10 @@ package main
 import "fmt"
 
 const (
-	a     = 42
-	b int = 43
+	a = 2017 + iota
+	b = 2017 + iota
+	c = 2017 + iota
+	d = 2017 + iota
 )
 
 func main() {
@@ -12,7 +14,8 @@ func main() {
 	//Exercise_02()
 	//Exercise_03()
 	//Exercise_04()
-	Exercise_05()
+	//Exercise_05()
+	Exercise_06()
 }
 
 func Exercise_01() {
@@ -83,4 +86,16 @@ func Exercise_05() {
 	video: 035*/
 	a := "Raw string literal"
 	fmt.Println(a)
+}
+
+func Exercise_06() {
+	/*	Hands-on exercise #6
+			Using iota, create 4 constants for the NEXT 4 years. Print the constant values.
+				solution: https://play.golang.org/p/MDLF3v5EGT
+		video: 036
+	*/
+	fmt.Println(a)
+	fmt.Println(b)
+	fmt.Println(c)
+	fmt.Println(d)
 }
