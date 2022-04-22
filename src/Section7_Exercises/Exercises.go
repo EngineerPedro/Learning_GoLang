@@ -11,7 +11,8 @@ func main() {
 	//Exercise_01()
 	//Exercise_02()
 	//Exercise_03()
-	Exercise_04()
+	//Exercise_04()
+	Exercise_05()
 }
 
 func Exercise_01() {
@@ -76,5 +77,10 @@ func Exercise_04() {
 }
 
 func Exercise_05() {
-
+	/*	Hands-on exercise #5
+		Create a variable of type string using a raw string literal. Print it.
+			solution: https://play.golang.org/p/dLy36A-V-w
+	video: 035*/
+	a := "Raw string literal"
+	fmt.Println(a)
 }
