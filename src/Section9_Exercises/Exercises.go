@@ -7,7 +7,8 @@ import (
 func main() {
 	//Exercise_01()
 	//Exercise_02()
-	Exercise_03()
+	//Exercise_03()
+	Exercise_04()
 }
 
 func Exercise_01() {
@@ -65,4 +66,26 @@ func Exercise_03() {
 			fmt.Println("I was alive :", x)
 		}
 	}
+}
+
+func Exercise_04() {
+	/*Hands-on exercise #4
+		Create a for loop using this syntax
+		● for { }
+		Have it print out the years you have been alive.
+			solution: https://play.golang.org/p/9VpnB-I1Pz
+	video: 053*/
+	x := 1993
+	for {
+		if x == 1993 {
+			fmt.Println("I was born:", x)
+		} else if x == 2022 {
+			fmt.Println("And I am still alive this year :", x)
+			break
+		} else {
+			fmt.Println("I was alive :", x)
+		}
+		x++
+	}
+
 }
