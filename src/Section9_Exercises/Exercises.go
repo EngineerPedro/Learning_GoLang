@@ -9,7 +9,10 @@ func main() {
 	//Exercise_02()
 	//Exercise_03()
 	//Exercise_04()
-	Exercise_05()
+	//Exercise_05()
+	//Exercise_06()
+	//Exercise_07()
+	Exercise_08()
 }
 
 func Exercise_01() {
@@ -115,4 +118,72 @@ func Exercise_05() {
 		}
 		x++
 	}
+}
+
+func Exercise_06() {
+	/*	Hands-on exercise #6
+		Create a program that shows the “if statement” in action.
+			solution: https://play.golang.org/p/DpZ_FLfn5s
+	video: 055*/
+
+	//performed this in my preiviouse exercises b/c well
+	//I know how to use an if statement already so just going to copy paste
+
+	x := 10
+	for {
+		if x == 10 {
+			fmt.Println("Lets get the remainder of the numbers from 10-100 after dividing by 4")
+			fmt.Println(x, " divided by 4 has a remainder of : ", x%4)
+		} else if x == 100 {
+
+			fmt.Println("And finally 100 divided by 4 is   :", x%4)
+			break
+		} else {
+			if x%4 != 0 {
+				fmt.Println(x, " divided by 4 has a remainder of : ", x%4)
+			}
+		}
+		x++
+	}
+}
+
+func Exercise_07() {
+	/*Hands-on exercise #7
+		Building on the previous hands-on exercise, create a program that uses “else if” and “else”.
+	solution: https://play.golang.org/p/IDnrJpE7vT
+	video: 056*/
+	// I have been combining for loop , if , and else if statements
+	// This exercise I just copied over what I already did to move forward
+	x := 1993
+	for {
+		if x == 1993 {
+			fmt.Println("I was born:", x)
+		} else if x == 2022 {
+			fmt.Println("And I am still alive this year :", x)
+			break
+		} else {
+			fmt.Println("I was alive :", x)
+		}
+		x++
+	}
+}
+
+func Exercise_08() {
+	/*	Hands-on exercise #8
+		Create a program that uses a switch statement with no switch expression specified.
+			solution: https://play.golang.org/p/YpPgkWGqKY
+	video: 057*/
+	x := 15
+	y := 16
+	switch {
+	case x == y:
+		fmt.Println("should not show ")
+	case x > y:
+		fmt.Println("should not show ")
+	case x < y:
+		fmt.Println("should show b/c y is greater then x and default " +
+			"switch statement without expression goes to what is true ")
+
+	}
+
 }
