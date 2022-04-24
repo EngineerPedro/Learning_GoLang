@@ -20,6 +20,7 @@ func Exercise_01() {
 }
 
 func Exercise_02() {
+
 	/*Hands-on exercise #2
 		Print every rune code point of the uppercase alphabet three times. Your output should look like
 	this:
@@ -41,4 +42,5 @@ func Exercise_02() {
 			fmt.Printf("\t%#U\n", i)
 		}
 	}
+
 }
