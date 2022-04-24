@@ -1,10 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	//Exercise_01()
-	Exercise_02()
+	//Exercise_02()
+	Exercise_03()
 }
 
 func Exercise_01() {
@@ -43,4 +46,23 @@ func Exercise_02() {
 		}
 	}
 
+}
+
+func Exercise_03() {
+	/*Hands-on exercise #3
+		Create a for loop using this syntax
+		● for condition { }
+		Have it print out the years you have been alive.
+			solution: https://play.golang.org/p/tnyqBPJ-i5
+	video: 052*/
+
+	for x := 1993; x <= 2022; x++ {
+		if x == 1993 {
+			fmt.Println("I was born:", x)
+		} else if x == 2022 {
+			fmt.Println("And I am still alive this year :", x)
+		} else {
+			fmt.Println("I was alive :", x)
+		}
+	}
 }
