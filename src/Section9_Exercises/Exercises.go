@@ -8,7 +8,8 @@ func main() {
 	//Exercise_01()
 	//Exercise_02()
 	//Exercise_03()
-	Exercise_04()
+	//Exercise_04()
+	Exercise_05()
 }
 
 func Exercise_01() {
@@ -88,4 +89,30 @@ func Exercise_04() {
 		x++
 	}
 
+}
+
+func Exercise_05() {
+
+	/*Hands-on exercise #5
+		Print out the remainder (modulus) which is found for each number between 10 and 100 when it
+		is divided by 4.
+	solution: https://play.golang.org/p/ohfJOW9euy
+	video: 054*/
+
+	x := 10
+	for {
+		if x == 10 {
+			fmt.Println("Lets get the remainder of the numbers from 10-100 after dividing by 4")
+			fmt.Println(x, " divided by 4 has a remainder of : ", x%4)
+		} else if x == 100 {
+
+			fmt.Println("And finally 100 divided by 4 is   :", x%4)
+			break
+		} else {
+			if x%4 != 0 {
+				fmt.Println(x, " divided by 4 has a remainder of : ", x%4)
+			}
+		}
+		x++
+	}
 }
