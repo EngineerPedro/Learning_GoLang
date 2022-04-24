@@ -12,7 +12,9 @@ func main() {
 	//Exercise_05()
 	//Exercise_06()
 	//Exercise_07()
-	Exercise_08()
+	//Exercise_08()
+	//Exercise_09()
+	Exercise_10()
 }
 
 func Exercise_01() {
@@ -186,4 +188,41 @@ func Exercise_08() {
 
 	}
 
+}
+
+func Exercise_09() {
+	/*	Hands-on exercise #9
+			Create a program that uses a switch statement with the switch expression specified as a
+			variable of TYPE string with the IDENTIFIER “favSport”.
+		solution: https://play.golang.org/p/h-8FnjpzWB
+		video: 058*/
+	favsport := "soccer"
+	switch favsport {
+	case "basketball":
+		fmt.Println("shoot")
+	case "soccer":
+		fmt.Println("KICK")
+	case "flying":
+		fmt.Println("JUMP")
+
+	}
+}
+
+func Exercise_10() {
+	/*	Hands-on exercise #10
+			Write down what these print:
+			● fmt.Println(true && true)
+			Todd McLeod - Learn To Code Go on Udemy - Part 1 - Page 38
+			● fmt.Println(true && false)
+			● fmt.Println(true || true)
+			● fmt.Println(true || false)
+			● fmt.Println(!true)
+		solution:
+		video: 059*/
+
+	fmt.Println(true && true)
+	fmt.Println(true && false)
+	fmt.Println(true || true)
+	fmt.Println(true || false)
+	fmt.Println(!true)
 }
