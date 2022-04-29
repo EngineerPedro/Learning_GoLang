@@ -5,7 +5,8 @@ import (
 )
 
 func main() {
-	Exercise_01()
+	//Exercise_01()
+	Exercise_02()
 }
 
 func Exercise_01() {
@@ -34,4 +35,23 @@ func Exercise_01() {
 	}
 
 	fmt.Printf("%T\n", x)
+}
+
+func Exercise_02() {
+	/*	Hands-on exercise #2
+			● Using a COMPOSITE LITERAL:
+			● create a SLICE of TYPE int
+			● assign 10 VALUES
+			● Range over the slice and print the values out.
+			● Using format printing
+			○ print out the TYPE of the slice
+		solution: https://play.golang.org/p/sAQeFB7DIs
+		video: 072*/
+	x := []int{43, 49, 55, 32, 15, 57, 69, 35, 12, 10}
+
+	for i, v := range x {
+		fmt.Println(i, v)
+	}
+	fmt.Printf("%T\n", x)
+
 }
