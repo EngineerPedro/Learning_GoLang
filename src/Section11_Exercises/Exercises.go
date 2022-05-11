@@ -11,7 +11,8 @@ func main() {
 	//Exercise_04()
 	//Exercise_05()
 	//Exercise_06()
-	Exercise_07()
+	//Exercise_07()
+	Practicing()
 }
 
 func Exercise_01() {
@@ -180,4 +181,20 @@ func Exercise_07() {
 		}
 	}
 
+}
+
+func Practicing() {
+	//Declare 100 slices and print each of them to embed the process
+	_Agent_Pedro := []string{"coder", "Computer-Scientists", "pyro", "carnivore"}
+	fmt.Println(_Agent_Pedro)
+	fmt.Printf("%T\n", _Agent_Pedro)
+	_Anget_Leslie := []string{"home-maker", "Cooks", "perfectionist", "carnivore"}
+	fmt.Println(_Anget_Leslie)
+	fmt.Printf("%T\n", _Anget_Leslie)
+	_Agent_Andrew := []string{"gun-smith", "Hunter", "debater", "carnivore"}
+	fmt.Println(_Agent_Andrew)
+	fmt.Printf("%T\n", _Agent_Andrew)
+	_Agent_Rachel := []string{"stay-at-home-mom", "Writer", "Author", "carnivore"}
+	fmt.Println(_Agent_Rachel)
+	fmt.Printf("%T\n", _Agent_Rachel)
 }
