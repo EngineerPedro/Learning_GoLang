@@ -10,7 +10,7 @@ func main() {
 	//Exercise_02()
 	//Exercise_03()
 	//Exercise_04()
-	Exercise_05()
+	//Exercise_05()
 	Exercise_06()
 	Exercise_07()
 	Exercise_08()
@@ -126,6 +126,14 @@ func Exercise_06() {
 	/*Hands-on exercise #6
 		● Build and use an anonymous func
 	code: https://play.golang.org/p/DQX3xEIcRe video: 107*/
+
+	func() {
+		for i := 0; i < 100; i++ {
+			fmt.Println(i)
+		}
+	}()
+
+	fmt.Println("done")
 }
 func Exercise_07() {
 	/*Hands-on exercise #7
