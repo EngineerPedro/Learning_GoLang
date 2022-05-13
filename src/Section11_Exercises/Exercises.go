@@ -12,7 +12,7 @@ func main() {
 	//Exercise_05()
 	//Exercise_06()
 	//Exercise_07()
-	Exercise_08()
+	//Exercise_08()
 	//Practicing()
 }
 
@@ -200,6 +200,22 @@ func Exercise_08() {
 	}
 }
 
+func Exercise09() {
+	m := map[string][]string{
+		`bond_james`:      []string{`Shaken, not stirred`, `Martinis`, `Women`},
+		"moneypenny_miss": []string{"James Bond", "Literature", "Computer Science"},
+		"Agent_Pedro":     []string{`Being evil`, `Ice cream`, `Sunsets`},
+		"Agent_Leslie":    []string{"Pedro", "Running", "Home-Maker"},
+	}
+	fmt.Println(m)
+
+	for k, v := range m {
+		fmt.Println("This is the record for:", k)
+		for i, v2 := range v {
+			fmt.Println("\t", i, v2)
+		}
+	}
+}
 func Practicing() {
 	//Declare 4 slices and print each of them to embed the process
 	_Agent_Pedro := []string{"coder", "Computer-Scientists", "pyro", "carnivore"}
