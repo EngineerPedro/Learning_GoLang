@@ -11,10 +11,10 @@ func main() {
 	//Exercise_03()
 	//Exercise_04()
 	//Exercise_05()
-	Exercise_06()
-	Exercise_07()
-	Exercise_08()
-	Exercise_09()
+	//Exercise_06()
+	//Exercise_07()
+	//Exercise_08()
+	//Exercise_09()
 	Exercise_10()
 }
 func Exercise_01() {
@@ -96,7 +96,6 @@ func Exercise_04() {
 	}
 	p1.speak()
 }
-
 func Exercise_05() {
 	/*	Hands-on exercise #5
 		● create a type SQUARE
@@ -139,6 +138,23 @@ func Exercise_07() {
 	/*Hands-on exercise #7
 		● Assign a func to a variable, then call that func
 	code: https://play.golang.org/p/_Qu7ZAyFDH video: 108*/
+	f := func() {
+		for i := 0; i < 3; i++ {
+			fmt.Println(i)
+		}
+	}
+
+	f()
+	fmt.Printf("%T\n", f)
+
+	fmt.Println(x)
+	fmt.Printf("%T\n", x)
+
+	g = f
+	g()
+	fmt.Printf("this is g %T\n", g)
+
+	fmt.Println("done")
 }
 func Exercise_08() {
 	/*	Hands-on exercise #8
@@ -146,21 +162,65 @@ func Exercise_08() {
 		● assign the returned func to a variable
 		● call the returned func
 	code: https://play.golang.org/p/c2HwqVE1Rd video: 109*/
+	f := foo2()
+	fmt.Println(f())
 }
 func Exercise_09() {
 	/*	Hands-on exercise #9
 		A “callback” is when we pass a func into a func as an argument. For this exercise,
 		● pass a func into a func as an argument
 	code: https://play.golang.org/p/0yGYPKh1y7 video: 110*/
+	g := func(xi []int) int {
+		if len(xi) == 0 {
+			return 0
+		}
+		if len(xi) == 1 {
+			return xi[0]
+		}
+		return xi[0] + xi[len(xi)-1]
+	}
+
+	x := foo3(g, []int{1, 2, 3, 4, 5, 6})
+	fmt.Println(x)
 }
 func Exercise_10() {
 	/*Hands-on exercise #10
-		Closure is when we have “enclosed” the scope of a variable in some code block. For this hands-on exercise, create a func which “encloses” the scope of a variable:
+		Closure is when we have “enclosed” the scope of a variable in some code block. For this
+	hands-on exercise, create a func which “encloses” the scope of a variable:
 	code: https://play.golang.org/p/a56uWtoFSL
 	video: 111*/
+	f := foo()
+	fmt.Println(f())
+	fmt.Println(f())
+	g := foo()
+	fmt.Println(g())
+	fmt.Println(g())
+	fmt.Println(g())
+	fmt.Println(g())
+	fmt.Println(g())
+	fmt.Println(g())
 }
 
 //Work Area
+func foo4() func() int {
+	x := 0
+	return func() int {
+		x++
+		return x
+	}
+}
+
+func foo3(f func(xi []int) int, ii []int) int {
+	n := f(ii)
+	n++
+	return n
+}
+
+func foo2() func() int {
+	return func() int {
+		return 42
+	}
+}
 
 func foo(xi ...int) int {
 	total := 0
@@ -208,3 +268,7 @@ type shape interface {
 func info(s shape) {
 	fmt.Println(s.area())
 }
+
+var x int
+
+var g func()
