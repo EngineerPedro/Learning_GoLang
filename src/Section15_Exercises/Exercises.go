@@ -1,7 +1,9 @@
 package main
 
+import "fmt"
+
 func main() {
-	Exercise_01()
+	//Exercise_01()
 	Exercise_02()
 	Exercise_03()
 	Exercise_04()
@@ -59,6 +61,9 @@ func Exercise_02() {
 		○ takes in a parameter of type []int
 		○ returns the sum of all values of type int passed in
 	code: https://play.golang.org/p/B0yRxtBQPD video: 103*/
+
+	ii := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	fmt.Println(foo(ii...))
 }
 func Exercise_03() {
 	/*Hands-on exercise #3
@@ -128,9 +133,12 @@ func Exercise_10() {
 
 //Work Area
 
-func foo() int {
-	x := 15
-	return x
+func foo(xi ...int) int {
+	total := 0
+	for _, v := range xi {
+		total += v
+	}
+	return total
 }
 
 func bar() string {
