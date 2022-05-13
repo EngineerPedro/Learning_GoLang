@@ -12,7 +12,8 @@ func main() {
 	//Exercise_05()
 	//Exercise_06()
 	//Exercise_07()
-	Practicing()
+	Exercise_08()
+	//Practicing()
 }
 
 func Exercise_01() {
@@ -125,8 +126,8 @@ func Exercise_05() {
 		video: 075*/
 
 	x := []int{42, 43, 44, 45, 46, 47, 48, 49, 50, 51}
-	x = append(x[:3], x[6:]...)
-	fmt.Println(x)
+	y := append(x[:3], x[6:]...)
+	fmt.Println(y)
 
 }
 
@@ -183,8 +184,24 @@ func Exercise_07() {
 
 }
 
+func Exercise_08() {
+	m := map[string][]string{
+		`bond_james`:      []string{`Shaken, not stirred`, `Martinis`, `Women`},
+		"moneypenny_miss": []string{"James Bond", "Literature", "Computer Science"},
+		"Agent_Pedro":     []string{`Being evil`, `Ice cream`, `Sunsets`},
+	}
+	fmt.Println(m)
+
+	for k, v := range m {
+		fmt.Println("This is the record for:", k)
+		for i, v2 := range v {
+			fmt.Println("\t", i, v2)
+		}
+	}
+}
+
 func Practicing() {
-	//Declare 100 slices and print each of them to embed the process
+	//Declare 4 slices and print each of them to embed the process
 	_Agent_Pedro := []string{"coder", "Computer-Scientists", "pyro", "carnivore"}
 	fmt.Println(_Agent_Pedro)
 	fmt.Printf("%T\n", _Agent_Pedro)
@@ -197,4 +214,14 @@ func Practicing() {
 	_Agent_Rachel := []string{"stay-at-home-mom", "Writer", "Author", "carnivore"}
 	fmt.Println(_Agent_Rachel)
 	fmt.Printf("%T\n", _Agent_Rachel)
+
+	//Chopping the slices up
+	_Agent_Pedro = _Agent_Pedro[1:]
+	fmt.Println(_Agent_Pedro)
+	fmt.Printf("%T\n", _Agent_Pedro)
+
+	_Agent_Pedro = _Agent_Pedro[:2]
+	fmt.Println(_Agent_Pedro)
+	fmt.Printf("%T\n", _Agent_Pedro)
+
 }
