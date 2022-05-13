@@ -5,7 +5,8 @@ import "fmt"
 func main() {
 	//Exercise_01()
 	//Exercise_02()
-	Exercise_03()
+	//Exercise_03()
+	Exercise_04()
 }
 
 func Exercise_01() {
@@ -120,7 +121,7 @@ func Exercise_03() {
 			doors: 2,
 			color: "white",
 		},
-		fourWheel: true,
+		//fourWheel: true,
 	}
 
 	s := sedan{
@@ -137,5 +138,35 @@ func Exercise_03() {
 }
 
 func Exercise_04() {
+	/*	Hands-on exercise #4 Create and use an anonymous struct.
+		solution: https://play.golang.org/p/otBHFs-lPp video: 089
+	*/
+	s := struct {
+		first     string
+		friends   map[string]int
+		favDrinks []string
+	}{
+		first: "James",
+		friends: map[string]int{
+			"Moneypenny": 555,
+			"Q":          777,
+			"M":          888,
+		},
+		favDrinks: []string{
+			"Martini",
+			"Water",
+		},
+	}
+	fmt.Println(s.first)
+	fmt.Println(s.friends)
+	fmt.Println(s.favDrinks)
+
+	for k, v := range s.friends {
+		fmt.Println(k, v)
+	}
+
+	for i, val := range s.favDrinks {
+		fmt.Println(i, val)
+	}
 
 }
