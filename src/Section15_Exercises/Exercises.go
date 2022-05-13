@@ -1,12 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
 	//Exercise_01()
-	Exercise_02()
-	Exercise_03()
-	Exercise_04()
+	//Exercise_02()
+	//Exercise_03()
+	//Exercise_04()
 	Exercise_05()
 	Exercise_06()
 	Exercise_07()
@@ -50,7 +53,6 @@ func Exercise_01() {
 	println(bar())
 
 }
-
 func Exercise_02() {
 	/*	Hands-on exercise #2
 		● create a func with the identifier foo that
@@ -69,6 +71,10 @@ func Exercise_03() {
 	/*Hands-on exercise #3
 	Use the “defer” keyword to show that a deferred func runs after the func containing it exits.
 		code: https://play.golang.org/p/XluEuUD0Nw video: 104*/
+
+	ii := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	defer fmt.Println(foo(ii...))
+
 }
 func Exercise_04() {
 	/*Hands-on exercise #4
@@ -83,7 +89,14 @@ func Exercise_04() {
 		● call the method from the value of type person
 		code: https://play.golang.org/p/NnXyWdqbbw video: 105*/
 
+	p1 := person{
+		first: "Pedro",
+		last:  "Guzman",
+		age:   29,
+	}
+	p1.speak()
 }
+
 func Exercise_05() {
 	/*	Hands-on exercise #5
 		● create a type SQUARE
@@ -99,7 +112,15 @@ func Exercise_05() {
 		● use func info to print the area of square
 		● use func info to print the area of circle
 		code: https://play.golang.org/p/NGGikHNvHv video: 106*/
+	circ := circle{
+		radius: 12.456,
+	}
+	squa := square{
+		length: 16,
+	}
 
+	info(circ)
+	info(squa)
 }
 func Exercise_06() {
 	/*Hands-on exercise #6
@@ -144,4 +165,38 @@ func foo(xi ...int) int {
 func bar() string {
 	x := "Pedro"
 	return x
+}
+
+type person struct {
+	first string
+	last  string
+	age   int
+}
+
+func (p person) speak() {
+	fmt.Println("I am,", p.first, p.last, "and I am", p.age, "years old.")
+}
+
+type circle struct {
+	radius float64
+}
+
+type square struct {
+	length float64
+}
+
+func (c circle) area() float64 {
+	return math.Pi * c.radius * c.radius
+}
+
+func (s square) area() float64 {
+	return s.length * s.length
+}
+
+type shape interface {
+	area() float64
+}
+
+func info(s shape) {
+	fmt.Println(s.area())
 }
