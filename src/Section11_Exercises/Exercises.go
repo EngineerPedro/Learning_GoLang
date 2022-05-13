@@ -13,6 +13,7 @@ func main() {
 	//Exercise_06()
 	//Exercise_07()
 	//Exercise_08()
+	Exercise_09and10()
 	//Practicing()
 }
 
@@ -200,7 +201,7 @@ func Exercise_08() {
 	}
 }
 
-func Exercise09() {
+func Exercise_09and10() {
 	m := map[string][]string{
 		`bond_james`:      []string{`Shaken, not stirred`, `Martinis`, `Women`},
 		"moneypenny_miss": []string{"James Bond", "Literature", "Computer Science"},
@@ -209,12 +210,16 @@ func Exercise09() {
 	}
 	fmt.Println(m)
 
+	delete(m, "moneypenny_miss")
+
 	for k, v := range m {
 		fmt.Println("This is the record for:", k)
 		for i, v2 := range v {
 			fmt.Println("\t", i, v2)
 		}
 	}
+
+	delete(m, "moneypenny_miss")
 }
 func Practicing() {
 	//Declare 4 slices and print each of them to embed the process
