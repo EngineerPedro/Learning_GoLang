@@ -3,7 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	Exercise_01()
+	//Exercise_01()
+	//Exercise_02()
+	Exercise_03()
 }
 
 func Exercise_01() {
@@ -33,7 +35,7 @@ func Exercise_01() {
 	}
 }
 
-func exercise_02() {
+func Exercise_02() {
 	/*	Hands-on exercise #2
 		Take the code from the previous exercise, then store the values of type person in a map with the key of last name.
 			Access each value in the map. Print out the values, ranging over the slice. solution: https://play.golang.org/p/RvvLyAMvGo*/
@@ -77,7 +79,7 @@ func exercise_02() {
 	}
 }
 
-func exercise_03() {
+func Exercise_03() {
 	/*	Hands-on exercise #3
 		● Create a new type: vehicle.
 		○ The underlying type is a struct. ○ The fields:
@@ -97,5 +99,43 @@ func exercise_03() {
 			● Print out a single field from each of these values.
 			solution: https://play.golang.org/p/PrTtTv_vVO
 	*/
+
+	type vehicle struct {
+		doors int
+		color string
+	}
+
+	type truck struct {
+		vehicle
+		fourwheel bool
+	}
+
+	type sedan struct {
+		vehicle
+		luxury bool
+	}
+
+	t := truck{
+		vehicle: vehicle{
+			doors: 2,
+			color: "white",
+		},
+		fourWheel: true,
+	}
+
+	s := sedan{
+		vehicle: vehicle{
+			doors: 4,
+			color: "black",
+		},
+		luxury: false,
+	}
+	fmt.Println(t)
+	fmt.Println(s)
+	fmt.Println(t.doors)
+	fmt.Println(s.doors)
+}
+
+func Exercise_04() {
 
 }
