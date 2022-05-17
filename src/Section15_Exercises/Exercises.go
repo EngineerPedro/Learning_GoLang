@@ -189,10 +189,10 @@ func Exercise_10() {
 	hands-on exercise, create a func which “encloses” the scope of a variable:
 	code: https://play.golang.org/p/a56uWtoFSL
 	video: 111*/
-	f := foo()
+	f := foo4()
 	fmt.Println(f())
 	fmt.Println(f())
-	g := foo()
+	g := foo4()
 	fmt.Println(g())
 	fmt.Println(g())
 	fmt.Println(g())
