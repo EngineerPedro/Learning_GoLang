@@ -118,6 +118,25 @@ func Exercise_03() {
 	fmt.Println(incrementer)
 }
 
+func Exercise_04() {
+	/*Fix the race condition you created in the previous exercise by using a mutex
+		● it makes sense to remove runtime.Gosched()
+	code: https://github.com/GoesToEleven/go-programming
+	video: 151*/
+
+}
+
+func Exercise_05() {
+	/*
+
+	 */
+}
+func Exercise_06() {
+	/*
+
+	 */
+}
+
 //Work Area
 
 type person struct {
