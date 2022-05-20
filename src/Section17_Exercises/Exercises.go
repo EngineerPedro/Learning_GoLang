@@ -4,7 +4,8 @@ import "fmt"
 
 func main() {
 	//Exercise_01()
-	Exercise_02()
+	//Exercise_02()
+
 }
 
 func Exercise_01() {
@@ -15,6 +16,7 @@ func Exercise_01() {
 			code: https://play.golang.org/p/57kW8xd0qT
 		video: 116
 	*/
+
 	x := 42
 	fmt.Println(x)
 	fmt.Println(&x)
