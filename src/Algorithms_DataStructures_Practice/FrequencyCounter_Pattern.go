@@ -18,6 +18,7 @@ func validAnagram(s1 string, s2 string) bool {
 	if len(s1) != len(s2) {
 		return false
 	}
+
 	//Split both of the strings, so we can get an array of letters that composes the string.
 	firstSplit := strings.Split(s1, "")
 	secondSplit := strings.Split(s2, "")

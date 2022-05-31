@@ -119,10 +119,12 @@ func Exercise_03() {
 }
 
 func Exercise_04() {
-	/*Fix the race condition you created in the previous exercise by using a mutex
-		● it makes sense to remove runtime.Gosched()
-	code: https://github.com/GoesToEleven/go-programming
-	video: 151*/
+	/*
+		Fix the race condition you created in the previous exercise by using a mutex
+			● it makes sense to remove runtime.Gosched()
+		code: https://github.com/GoesToEleven/go-programming
+		video: 151
+	*/
 
 }
 
