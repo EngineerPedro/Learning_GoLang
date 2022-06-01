@@ -2,19 +2,19 @@ package main
 
 import "fmt"
 
-type Node struct {
-	prev *Node
-	next *Node
+type Node01 struct {
+	prev *Node01
+	next *Node01
 	key  interface{}
 }
 
 type List struct {
-	head *Node
-	tail *Node
+	head *Node01
+	tail *Node01
 }
 
 func (L *List) Insert(key interface{}) {
-	list := &Node{
+	list := &Node01{
 		next: L.head,
 		key:  key,
 	}
@@ -39,7 +39,7 @@ func (l *List) Display() {
 	fmt.Println()
 }
 
-func Display(list *Node) {
+func Display(list *Node01) {
 	for list != nil {
 		fmt.Printf("%v ->", list.key)
 		list = list.next
@@ -47,7 +47,7 @@ func Display(list *Node) {
 	fmt.Println()
 }
 
-func ShowBackwards(list *Node) {
+func ShowBackwards(list *Node01) {
 	for list != nil {
 		fmt.Printf("%v <-", list.key)
 		list = list.prev
@@ -57,7 +57,7 @@ func ShowBackwards(list *Node) {
 
 func (l *List) Reverse() {
 	curr := l.head
-	var prev *Node
+	var prev *Node01
 	l.tail = l.head
 
 	for curr != nil {
