@@ -195,18 +195,18 @@ func Exercise_08() {
 			`no_dr`, `Being evil`, `Ice cream`, `Sunsets`
 		solution: https://play.golang.org/p/nTzSlRa9_A
 		video: 078*/
-	m := map[string][]string{
+	_ = map[string][]string{
 		"Guzman_Pedro":  []string{"Coding", "Arguing", "Reading"},
 		"Guzman_Leslie": []string{"Cooking", "Running", "Yardword"},
 		"Dog_Sophie":    []string{"Sleeping", "Eating", "Pooping"},
 	}
-	for i, v := range m {
+	/*	for i, v := range m {
 
 		println(m)
-	}
+	}*/
 }
 
-func Exercise_08() {
+func Exercise_0801() {
 	m := map[string][]string{
 		`bond_james`:      []string{`Shaken, not stirred`, `Martinis`, `Women`},
 		"moneypenny_miss": []string{"James Bond", "Literature", "Computer Science"},
