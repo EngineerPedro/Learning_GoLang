@@ -84,22 +84,17 @@ func twoSum(nums []int, target int) []int {
 	hm := make(map[int]int)
 	//range through all values in the slice
 	//addend is each value in the slice nums
-	for i, Current_Value := range nums {
-		//comma ok idiom to make sure it exists
-		if key, ok := hm[target-Current_Value]; ok {
+	for index01, Current_Value := range nums {
+		//Create variable to let us know what we are looking for
+		Search_For := target - Current_Value
+		//comma ok idiom to make sure at the index/key
+		//the value we are looking for exists
+		if index02, ok := hm[Search_For]; ok {
 			//returns the indexs of the spot in the slices that meet the requirements
-			return []int{i, key}
+			return []int{index01, index02}
 		}
-		hm[Current_Value] = i
+		hm[Current_Value] = index01
 	}
 
 	return []int{-1, -1}
-}
-
-func ConvertSlicetoMap(arr []int) map[int]int {
-	The_Map := make(map[int]int)
-	for k := 0; k < len(arr); k++ {
-		The_Map[arr[k]] = arr[k+1]
-	}
-	return The_Map
 }
