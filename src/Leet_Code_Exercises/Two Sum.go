@@ -93,6 +93,7 @@ func twoSum(nums []int, target int) []int {
 			//returns the indexs of the spot in the slices that meet the requirements
 			return []int{index01, index02}
 		}
+		//makes a key of the "current value" and stores the "index01" as a value in that key
 		hm[Current_Value] = index01
 	}
 
