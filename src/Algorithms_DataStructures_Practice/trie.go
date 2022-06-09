@@ -53,6 +53,6 @@ func (t *Trie) Search(w string) bool {
 }
 
 func main() {
-	tre := IniitTrie()
-	fmt.Println(tre.root)
+	trie := IniitTrie()
+	fmt.Println(trie.root)
 }
