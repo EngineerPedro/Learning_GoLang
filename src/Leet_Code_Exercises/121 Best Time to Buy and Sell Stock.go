@@ -8,22 +8,23 @@ func main() {
 }
 
 func maxProfit(prices []int) int {
-	min, profit := prices[0], 0
-	for i := 1; i < len(prices); i++ {
-		min = Min(min, prices[i])
-		profit = Max(profit, prices[i]-min)
+	l, r := 0, 1
+	maxP := 0
+
+	for r < len(prices) {
+		if prices[l] < prices[r] {
+			profit := prices[r] - prices[l]
+			maxP = Max(maxP, profit)
+		} else {
+			l = r
+		}
+		r++
 	}
-	return profit
+	return maxP
 }
 
 func Max(a, b int) int {
 	if a > b {
-		return a
-	}
-	return b
-}
-func Min(a, b int) int {
-	if a < b {
 		return a
 	}
 	return b
