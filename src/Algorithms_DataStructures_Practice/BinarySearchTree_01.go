@@ -19,12 +19,12 @@ func (n *Node) Insert(k int) {
 		} else {
 			n.Right.Insert(k)
 		}
-	} else if k > n.Key {
+	} else if n.Key > k {
 		//move left
-		if n.Right == nil {
-			n.Right = &Node{Key: k}
+		if n.Left == nil {
+			n.Left = &Node{Key: k}
 		} else {
-			n.Right.Insert(k)
+			n.Left.Insert(k)
 		}
 	}
 }
@@ -44,8 +44,23 @@ func (n *Node) Search(k int) bool {
 	return true
 }
 
+func invertTree(root *Node) *Node {
+	if root == nil {
+		return nil
+	}
+	tmp := root.Left
+	root.Left = root.Right
+	root.Right = tmp
+
+	invertTree(root.Left)
+	invertTree(root.Right)
+	return root
+}
+
 func main() {
 	tree := &Node{Key: 100}
+	tree.Insert(500)
 	tree.Insert(50)
-	fmt.Println(tree)
+	fmt.Printf("%+v\n", tree)
+	invertTree(tree)
 }

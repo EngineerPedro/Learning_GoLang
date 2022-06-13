@@ -1,7 +1,7 @@
 package main
 
 func main() {
-	trie := Constructor()
+	trie := Constructor_02()
 	trie.Insert("apple")
 	trie.Search("apple")   // return True
 	trie.Search("app")     // return False
@@ -15,7 +15,7 @@ type Trie struct {
 	isEnd    bool
 }
 
-func Constructor() Trie {
+func Constructor_02() Trie {
 	return Trie{}
 }
 
