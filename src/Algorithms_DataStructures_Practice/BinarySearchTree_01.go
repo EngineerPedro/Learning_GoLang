@@ -2,29 +2,57 @@ package main
 
 import "fmt"
 
+//Represents the start of the tree
+var root *Node = nil
+
 //Node represents the components of a binary search tree
 type Node struct {
-	Key   int
+	data  int
 	Left  *Node
 	Right *Node
 }
 
+//Make a new node for what is to be inserted into the tree
+func createNewNode(newData int) *Node {
+	var newNode *Node = new(Node)
+	newNode.data = newData
+	newNode.Left = nil
+	newNode.Right = nil
+	return newNode
+}
+
+//In-Order traversal of the tree
+func inOrder(root *Node) {
+	if root == nil {
+		return
+	}
+	//Use recursion to go through the
+	inOrder(root.Left) //Traversing the left subtree
+	fmt.Printf("%d", root.data)
+	inOrder(root.Right) //Traversing the right subtree
+}
+
 //Insert will add a node to the tree
 //the key to add should not be already in the tree
-func (n *Node) Insert(k int) {
-	if n.Key < k {
-		//move right
-		if n.Right == nil {
-			n.Right = &Node{Key: k}
+func insert(node *Node, newData int) {
+	//If no tree exists we are at the
+	if root == nil {
+		root = &Node{data: newData, Left: nil, Right: nil}
+	}
+
+	var compareValue = newData - node.data
+
+	if compareValue < 0 {
+		if node.Left == nil {
+			node.Left = createNewNode(newData)
 		} else {
-			n.Right.Insert(k)
+			insert(node.Left, newData)
 		}
-	} else if n.Key > k {
-		//move left
-		if n.Left == nil {
-			n.Left = &Node{Key: k}
+	} else if compareValue > 0 {
+		if node.Right == nil {
+			node.Right = createNewNode(newData)
 		} else {
-			n.Left.Insert(k)
+			insert(node.Right, newData)
 		}
 	}
 }
@@ -35,9 +63,9 @@ func (n *Node) Search(k int) bool {
 		return false
 	}
 
-	if n.Key < k {
+	if n.data < k {
 		return n.Right.Search(k) //recursion
-	} else if n.Key > k {
+	} else if n.data > k {
 		return n.Left.Search(k) //recursion
 	}
 
@@ -58,9 +86,18 @@ func invertTree(root *Node) *Node {
 }
 
 func main() {
-	tree := &Node{Key: 100}
-	tree.Insert(500)
-	tree.Insert(50)
-	fmt.Printf("%+v\n", tree)
-	invertTree(tree)
+	//Constructing a binary search tree
+	insert(root, 42)
+	insert(root, 66)
+	insert(root, 67)
+	insert(root, 68)
+	insert(root, 25)
+	insert(root, 32)
+	insert(root, 12)
+	insert(root, 40)
+	fmt.Printf("In-order traversal binary search tree: \n")
+	inOrder(root)
+	invertTree(root)
+	inOrder(root)
+
 }
